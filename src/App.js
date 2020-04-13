@@ -7,6 +7,14 @@ class App extends Component {
     posts: []
   };
 
+  async componentDidMount() {
+    // Initiall promise is in pending state ->resolved (success) or rejected (failure)
+     // promises to hold the result of async operation.
+    const {data: posts} = await axios.get("https://jsonplaceholder.typicode.com/posts"); 
+   
+    this.setState({posts});
+  }
+
   handleAdd = () => {
     console.log("Add");
   };
