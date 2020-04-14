@@ -28,7 +28,7 @@ class App extends Component {
 
   handleUpdate = async post => {
     post.title = "UPDATED";
-    await http.put(config.apiEndpoint + "/" + post.id, post); //Update whole post object
+    await http.put("s" + config.apiEndpoint + "/" + post.id, post); //Update whole post object
    // http.patch(config.apiEndpoint + "/" + post.id, {title: post.title}); //Update just a property
    const posts = [...this.state.posts];
    const index = posts.indexOf(post);
@@ -43,7 +43,7 @@ class App extends Component {
     const posts = this.state.posts.filter(p => p.id !== post.id);
     this.setState({posts});
     try{
-      await http.delete(config.apiEndpoint + "/"+post.id);
+      await http.delete("s"+config.apiEndpoint + "/"+post.id);
       //throw new Error(""); Raise exception to test if everything is reverted
     }
      //if error occurs, revert to origial posts
