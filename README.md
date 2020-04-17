@@ -1,4 +1,4 @@
-In this project, I created an http-app in React JS, in which I implemented the following:
+In this project, I created an http-client-app in React JS, in which I implemented the following:
 - Fetching the **async promise** data from **[JSONplaceholder REST API](https://jsonplaceholder.typicode.com/)** via **[axios](https://www.npmjs.com/package/axios)**.
 - Creating the data by **POST** request.
 - Updating the data by **PUT** request.
